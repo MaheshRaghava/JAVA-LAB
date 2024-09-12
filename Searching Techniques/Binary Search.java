@@ -1,18 +1,19 @@
+//USING FUNCTIONS
 import java.util.*;
-class Binary_search
+class Binarysearch
 {
 static void sort(int a[],int n)
 {
-	int t;
+	int temp;
 	for(int i=0;i<n;i++)
 	{
 		for(int j=0;j<n-i-1;j++)
 		{
 			if(a[j]>a[j+1])
 			{
-				t = a[j];
+				temp = a[j];
 				a[j]=a[j+1];
-				a[j+1]=t;
+				a[j+1]=temp;
 			}
 		}
 	}
@@ -40,11 +41,11 @@ static int Binarysearch(int a[],int n,int key)
         }
         if(pos>0)
         {
-        	System.out.println("key is found at "+pos);
+        	System.out.println("Key is found at "+pos);
         }
         else
         {
-        	System.out.println("key is not found");
+        	System.out.println("Key is not found");
         }
         return pos;
 }
@@ -52,19 +53,21 @@ public static void main(String []args)
 {
 	
 	Scanner sc = new Scanner(System.in);
-	System.out.println("enter the array size:");
+	System.out.print("Enter the size of array: ");
 	int n = sc.nextInt();
 	int a[] = new int[n];
-	System.out.println("enter array elements:");
-	for(int i=0;i<n;i++){
-	a[i]=sc.nextInt();
+	System.out.println("Enter elements in  array : ");
+	for(int i=0;i<n;i++)
+	{
+		a[i]=sc.nextInt();
 	}
 	sort(a,n);
-        System.out.println("the sorted elements are:");
-	for(int i=0;i<n;i++){
-	System.out.println(a[i]);
+	System.out.printf("Sorted Array : ");
+	for(int i=0;i<n;i++)
+	{
+	  System.out.printf("%d ",a[i]);
 	}
-        System.out.println("enter a key:");
+        System.out.printf("\nEnter a key : ");
         int key = sc.nextInt();
         Binarysearch(a,n,key);
         
