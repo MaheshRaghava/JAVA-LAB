@@ -6,12 +6,12 @@ class MultipleCatch
   {
     try
     {
-      //int a=24/0;
-      //System.out.println(a);
+      int a=24/0;
+      System.out.println(a);
       //int b[]=new int [5];
       //System.out.println(b[10]);
-      String c="Mahesh";
-      int n=Integer.parseInt(c);
+      //String c="Mahesh";
+      //int n=Integer.parseInt(c);
       //String d=null;
       //System.out.println(d.length());
        
